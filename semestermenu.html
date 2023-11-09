@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester Menu</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="btn-group" role="group" aria-label="Odd Semesters">
+                    <button type="button" class="btn btn-primary" id="sem1">Semester 1</button>
+                    <button type="button" class="btn btn-primary" id="sem3">Semester 3</button>
+                    <button type="button" class="btn btn-primary" id="sem5">Semester 5</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="btn-group" role="group" aria-label="Even Semesters">
+                    <button type="button" class="btn btn-secondary" id="sem2">Semester 2</button>
+                    <button type="button" class="btn btn-danger" id="sem4">Semester 4</button>
+                    <button type="button" class="btn btn-primary" id="sem6">Semester 6</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="semester-content" id="sem1-content">
+            <h3>Semester 1 Courses</h3>
+            <ul>
+                <li>Course 1</li>
+                <li>Course 2</li>
+                <li>Course 3</li>
+            </ul>
+        </div>
+        <div class="semester-content" id="sem2-content">
+            <h3>Semester 2 Courses</h3>
+            <ul>
+                <li>Course 4</li>
+                <li>Course 5</li>
+                <li>Course 6</li>
+            </ul>
+        </div>
+        <div class="semester-content" id="sem3-content">
+            <h3>Semester 3 Courses</h3>
+            <ul>
+                <li>Course 7</li>
+                <li>Course 8</li>
+                <li>Course 9</li>
+            </ul>
+        </div>
+        <div class="semester-content" id="sem4-content">
+            <h3>Semester 4 Courses</h3>
+            <ul>
+                <li>Course 10</li>
+                <li>Course 11</li>
+                <li>Course 12</li>
+            </ul>
+        </div>
+        <div class="semester-content" id="sem5-content">
+            <h3>Semester 5 Courses</h3>
+            <ul>
+                <li>Course 13</li>
+                <li>Course 14</li>
+                <li>Course 15</li>
+            </ul>
+        </div>
+        <div class="semester-content" id="sem6-content">
+            <h3>Semester 6 Courses</h3>
+            <ul>
+                <li>Course 16</li>
+                <li>Course 17</li>
+                <li>Course 18</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Link to Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript to toggle the visibility of semester content
+        debugger
+        $(document).ready(function () {
+            $(".semester-content").hide(); // Hide all semester content initially
+
+            $(".btn").click(function () {
+                var semesterId = $(this).attr("id") + "-content";
+                $(".semester-content").hide();
+                $("#" + semesterId).show();
+            });
+        });
+
+    //     document.addEventListener("DOMContentLoaded", function () {
+    //     var semesterButtons = document.querySelectorAll(".btn");
+    //     var semesterContents = document.querySelectorAll(".semester-content");
+
+    //     semesterContents.forEach(function (content) {
+    //         content.style.display = "none"; // Hide all semester content initially
+    //     });
+
+    //     semesterButtons.forEach(function (button) {
+    //         button.addEventListener("click", function () {
+    //             var semesterId = button.id + "-content";
+
+    //             semesterContents.forEach(function (content) {
+    //                 content.style.display = "none";
+    //             });
+
+    //             var selectedSemesterContent = document.getElementById(semesterId);
+    //             if (selectedSemesterContent) {
+    //                 selectedSemesterContent.style.display = "block";
+    //             }
+    //         });
+    //     });
+    // });
+    </script>
+</body>
+</html>
